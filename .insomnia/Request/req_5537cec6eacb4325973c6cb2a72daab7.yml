@@ -1,32 +1,28 @@
-_id: req_506fe34418114bda91c6597e322aeef4
+_id: req_5537cec6eacb4325973c6cb2a72daab7
 type: Request
 parentId: fld_0aef0b8619084fc981f7697793fc95cc
-modified: 1731438120883
-created: 1731437483749
-url: "{{ _.base_url }}/delete_grocery"
-name: Delete a grocery from the list
-description: Delete a grocery from the list
-method: DELETE
-body:
-  mimeType: application/json
-  text: |-
-    {
-      "grocery": "salad"
-    }
+modified: 1731438115787
+created: 1731437993967
+url: "{{ _.base_url }}/get_groceries"
+name: Check if a grocery item is added
+description: Get the list of groceries
+method: GET
+body: {}
 parameters: []
-headers:
-  - name: Content-Type
-    disabled: false
-    value: application/json
+headers: []
 authentication: {}
 preRequestScript: null
-metaSortKey: -1731437483749
+metaSortKey: -1731437483774
 isPrivate: false
 pathParameters: null
 afterResponseScript: |+
   
   insomnia.test('Check if status is 200', () => {
       insomnia.expect(insomnia.response.code).to.eql(200);
+  	const jsonBody = insomnia.response.json();
+  	insomnia.expect(jsonBody.groceries.length).to.eql(1);
+
+
   });
 
 settingStoreCookies: true

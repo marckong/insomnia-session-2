@@ -1,7 +1,7 @@
 _id: req_a1e5a19787574c0099c2ba49d8673f24
 type: Request
 parentId: fld_0aef0b8619084fc981f7697793fc95cc
-modified: 1731437483748
+modified: 1731438084472
 created: 1731437483748
 url: "{{ _.base_url }}/add_grocery"
 name: Add a grocery to the list
@@ -11,7 +11,7 @@ body:
   mimeType: application/json
   text: |-
     {
-      "grocery": "string"
+      "grocery": "salad"
     }
 parameters: []
 headers:
@@ -20,10 +20,15 @@ headers:
     value: application/json
 authentication: {}
 preRequestScript: null
-metaSortKey: -1731437483748
+metaSortKey: -1731437483799
 isPrivate: false
 pathParameters: null
-afterResponseScript: null
+afterResponseScript: |+
+  
+  insomnia.test('Check if status is 200', () => {
+      insomnia.expect(insomnia.response.code).to.eql(200);
+  });
+
 settingStoreCookies: true
 settingSendCookies: true
 settingDisableRenderRequestBody: false
