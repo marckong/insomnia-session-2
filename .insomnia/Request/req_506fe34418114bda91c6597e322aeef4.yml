@@ -1,0 +1,32 @@
+_id: req_506fe34418114bda91c6597e322aeef4
+type: Request
+parentId: fld_0aef0b8619084fc981f7697793fc95cc
+modified: 1731437483749
+created: 1731437483749
+url: "{{ _.base_url }}/delete_grocery"
+name: Delete a grocery from the list
+description: Delete a grocery from the list
+method: DELETE
+body:
+  mimeType: application/json
+  text: |-
+    {
+      "grocery": "string"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    disabled: false
+    value: application/json
+authentication: {}
+preRequestScript: null
+metaSortKey: -1731437483749
+isPrivate: false
+pathParameters: null
+afterResponseScript: null
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

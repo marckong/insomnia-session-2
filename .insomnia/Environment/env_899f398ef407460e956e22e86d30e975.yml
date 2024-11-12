@@ -1,0 +1,14 @@
+_id: env_899f398ef407460e956e22e86d30e975
+type: Environment
+parentId: env_0db116acc593b7afe6102ed0da0680c7d274e646
+modified: 1731437517151
+created: 1731437483746
+name: Remote
+data:
+  scheme: https
+  base_path: ""
+  host: groceries-demo.dev.insomnia.moe
+dataPropertyOrder: null
+color: null
+isPrivate: false
+metaSortKey: 1731437483746
